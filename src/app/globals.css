@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0e13;
+  --card: #141b26;
+  --card2: #1a2231;
+  --border: #263145;
+  --muted: #8b98ad;
+  --green: #22c55e;
+  --green-dim: rgba(34, 197, 94, 0.14);
+  --red: #f87171;
+  --amber: #fbbf24;
+  --accent: #38bdf8;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: #e8eef7;
+  font-family: ui-sans-system, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2b3a52 transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2b3a52;
+  border-radius: 8px;
+}
+
+.phone-shadow {
+  box-shadow: 0 0 0 1px #1f2a3d, 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+
+.card {
+  background: linear-gradient(180deg, var(--card) 0%, #121826 100%);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.card-flat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.pill-taken {
+  background: var(--green-dim);
+  border: 1px solid rgba(34, 197, 94, 0.45);
+  color: #4ade80;
+}
+
+.pill-skipped {
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid #334155;
+  color: #94a3b8;
+}
+
+.pill-auto {
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #7dd3fc;
+}
+
+.btn-press:active {
+  transform: scale(0.97);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.anim-slide-up {
+  animation: slideUp 0.28s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.anim-fade {
+  animation: fadeIn 0.2s ease both;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.anim-toast {
+  animation: toastIn 0.22s ease both;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+.anim-pulse-dot {
+  animation: pulseDot 1.2s ease-in-out infinite;
+}
+
+.toggle-track {
+  transition: background 0.2s ease;
+}
+.toggle-thumb {
+  transition: transform 0.2s ease;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+select option {
+  background: #141b26;
+  color: #e8eef7;
+}

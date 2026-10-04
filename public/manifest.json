@@ -1,0 +1,10 @@
+{
+  "name": "MealTrack — Monthly Meal Cost Tracker",
+  "short_name": "MealTrack",
+  "description": "Offline monthly meal cost tracker.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0a0e13",
+  "theme_color": "#0a0e13",
+  "icons": []
+}
